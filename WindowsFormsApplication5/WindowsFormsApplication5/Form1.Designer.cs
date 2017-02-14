@@ -32,12 +32,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lowerRangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.upperRangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtNextSample = new System.Windows.Forms.TextBox();
             this.txtNextLogging = new System.Windows.Forms.TextBox();
@@ -85,6 +85,24 @@
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.settingToolStripMenuItem.Text = "Setting";
             // 
+            // resolutionToolStripMenuItem
+            // 
+            this.resolutionToolStripMenuItem.Name = "resolutionToolStripMenuItem";
+            this.resolutionToolStripMenuItem.Size = new System.Drawing.Size(196, 30);
+            this.resolutionToolStripMenuItem.Text = "Resolution";
+            // 
+            // lowerRangeToolStripMenuItem
+            // 
+            this.lowerRangeToolStripMenuItem.Name = "lowerRangeToolStripMenuItem";
+            this.lowerRangeToolStripMenuItem.Size = new System.Drawing.Size(196, 30);
+            this.lowerRangeToolStripMenuItem.Text = "Lower range";
+            // 
+            // upperRangeToolStripMenuItem
+            // 
+            this.upperRangeToolStripMenuItem.Name = "upperRangeToolStripMenuItem";
+            this.upperRangeToolStripMenuItem.Size = new System.Drawing.Size(196, 30);
+            this.upperRangeToolStripMenuItem.Text = "Upper range";
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -92,6 +110,12 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
             this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(147, 30);
+            this.aboutToolStripMenuItem1.Text = "About";
             // 
             // helpToolStripMenuItem
             // 
@@ -101,87 +125,63 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // resolutionToolStripMenuItem
-            // 
-            this.resolutionToolStripMenuItem.Name = "resolutionToolStripMenuItem";
-            this.resolutionToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-            this.resolutionToolStripMenuItem.Text = "Resolution";
-            // 
-            // lowerRangeToolStripMenuItem
-            // 
-            this.lowerRangeToolStripMenuItem.Name = "lowerRangeToolStripMenuItem";
-            this.lowerRangeToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-            this.lowerRangeToolStripMenuItem.Text = "Lower range";
-            // 
-            // upperRangeToolStripMenuItem
-            // 
-            this.upperRangeToolStripMenuItem.Name = "upperRangeToolStripMenuItem";
-            this.upperRangeToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-            this.upperRangeToolStripMenuItem.Text = "Upper range";
-            // 
-            // aboutToolStripMenuItem1
-            // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(211, 30);
-            this.aboutToolStripMenuItem1.Text = "About";
-            // 
             // helpMeToolStripMenuItem
             // 
             this.helpMeToolStripMenuItem.Name = "helpMeToolStripMenuItem";
-            this.helpMeToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.helpMeToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
             this.helpMeToolStripMenuItem.Text = "Help me";
             this.helpMeToolStripMenuItem.Click += new System.EventHandler(this.helpMeToolStripMenuItem_Click);
             // 
             // txtNextSample
             // 
-            this.txtNextSample.Location = new System.Drawing.Point(249, 52);
+            this.txtNextSample.Location = new System.Drawing.Point(26, 109);
             this.txtNextSample.Name = "txtNextSample";
             this.txtNextSample.Size = new System.Drawing.Size(100, 26);
             this.txtNextSample.TabIndex = 1;
             // 
             // txtNextLogging
             // 
-            this.txtNextLogging.Location = new System.Drawing.Point(243, 123);
+            this.txtNextLogging.Location = new System.Drawing.Point(28, 229);
             this.txtNextLogging.Name = "txtNextLogging";
             this.txtNextLogging.Size = new System.Drawing.Size(106, 26);
             this.txtNextLogging.TabIndex = 2;
             // 
             // txtNoOfWritings
             // 
-            this.txtNoOfWritings.Location = new System.Drawing.Point(249, 220);
+            this.txtNoOfWritings.Location = new System.Drawing.Point(32, 289);
             this.txtNoOfWritings.Name = "txtNoOfWritings";
             this.txtNoOfWritings.Size = new System.Drawing.Size(100, 26);
             this.txtNoOfWritings.TabIndex = 3;
             // 
             // txtLogFile
             // 
-            this.txtLogFile.Location = new System.Drawing.Point(79, 268);
+            this.txtLogFile.Location = new System.Drawing.Point(33, 345);
             this.txtLogFile.Name = "txtLogFile";
             this.txtLogFile.Size = new System.Drawing.Size(100, 26);
             this.txtLogFile.TabIndex = 4;
             // 
             // txtHistory
             // 
-            this.txtHistory.Location = new System.Drawing.Point(368, 93);
+            this.txtHistory.Location = new System.Drawing.Point(171, 93);
             this.txtHistory.Multiline = true;
             this.txtHistory.Name = "txtHistory";
-            this.txtHistory.Size = new System.Drawing.Size(328, 222);
+            this.txtHistory.Size = new System.Drawing.Size(525, 278);
             this.txtHistory.TabIndex = 5;
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(79, 168);
+            this.btnLog.Location = new System.Drawing.Point(26, 164);
             this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(75, 39);
+            this.btnLog.Size = new System.Drawing.Size(106, 39);
             this.btnLog.TabIndex = 6;
             this.btnLog.Text = "Logging";
             this.btnLog.UseVisualStyleBackColor = true;
             // 
             // btnSample
             // 
-            this.btnSample.Location = new System.Drawing.Point(79, 93);
+            this.btnSample.Location = new System.Drawing.Point(27, 50);
             this.btnSample.Name = "btnSample";
-            this.btnSample.Size = new System.Drawing.Size(75, 33);
+            this.btnSample.Size = new System.Drawing.Size(100, 33);
             this.btnSample.TabIndex = 7;
             this.btnSample.Text = "Sampling";
             this.btnSample.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 52);
+            this.label1.Location = new System.Drawing.Point(24, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 8;
@@ -198,7 +198,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 129);
+            this.label2.Location = new System.Drawing.Point(25, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 9;
@@ -207,7 +207,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 223);
+            this.label3.Location = new System.Drawing.Point(29, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 20);
             this.label3.TabIndex = 10;
@@ -216,7 +216,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(222, 274);
+            this.label4.Location = new System.Drawing.Point(29, 322);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 20);
             this.label4.TabIndex = 11;
@@ -225,7 +225,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(421, 67);
+            this.label5.Location = new System.Drawing.Point(394, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 20);
             this.label5.TabIndex = 12;
