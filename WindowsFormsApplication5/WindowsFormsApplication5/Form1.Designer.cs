@@ -52,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,8 +115,9 @@
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(147, 30);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(211, 30);
             this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -159,6 +161,7 @@
             this.txtLogFile.Name = "txtLogFile";
             this.txtLogFile.Size = new System.Drawing.Size(100, 26);
             this.txtLogFile.TabIndex = 4;
+            this.txtLogFile.Text = "HelpMe";
             // 
             // txtHistory
             // 
@@ -176,6 +179,7 @@
             this.btnLog.TabIndex = 6;
             this.btnLog.Text = "Logging";
             this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
             // btnSample
             // 
@@ -185,6 +189,11 @@
             this.btnSample.TabIndex = 7;
             this.btnSample.Text = "Sampling";
             this.btnSample.UseVisualStyleBackColor = true;
+            this.btnSample.Click += new System.EventHandler(this.btnSample_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
             // 
@@ -230,6 +239,10 @@
             this.label5.Size = new System.Drawing.Size(99, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Sensor Data";
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -284,6 +297,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

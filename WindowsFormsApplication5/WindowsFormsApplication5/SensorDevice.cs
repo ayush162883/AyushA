@@ -8,6 +8,7 @@ namespace WindowsFormsApplication5
 {
     class SensorDevice
     {
+        static Random rand = new Random();
         public int Resolution { get; set; }
         public double MinRange { get; set; }
         public double MaxRange { get; set; }
@@ -18,8 +19,8 @@ namespace WindowsFormsApplication5
             Resolution = res;
             MinRange = minR;
             MaxRange = maxR;
+            
         }
-        Random rand = new Random();
 
         /// <summary>
         /// This Method Helps in simulation of Random Temperature
@@ -29,7 +30,7 @@ namespace WindowsFormsApplication5
         {
             int maxRes = (int)Math.Pow(2, Resolution);
             double R = rand.Next(1,maxRes);
-            return (R - 1) * (MaxRange - MinRange) / (maxRes - 1) + MinRange;
+            return Math.Round((R - 1) * (MaxRange - MinRange) / (maxRes - 1) + MinRange, 3);
         }
     }
 }
