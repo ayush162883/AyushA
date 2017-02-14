@@ -161,7 +161,7 @@
             this.txtLogFile.Name = "txtLogFile";
             this.txtLogFile.Size = new System.Drawing.Size(100, 26);
             this.txtLogFile.TabIndex = 4;
-            this.txtLogFile.Text = "HelpMe";
+            this.txtLogFile.Text = "temperature";
             // 
             // txtHistory
             // 

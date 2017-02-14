@@ -8,12 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApplication5
 {
     public partial class Form1 : Form
- 
+
     {
+        FileStream fstrem;
+        StreamWriter strw;
         SensorDevice[] s;
         double[,] senval;
         double[] average;
@@ -50,7 +53,7 @@ namespace WindowsFormsApplication5
 
         private void helpMeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start(@"C:\Users\achar_mxsu8a3\OOADP\AyushA\" + fileName + ".txt");
+            Process.Start(@"C:\Users\achar_mxsu8a3\OOADP\AyushA\HelpMe.txt");
         }
 
         private void btnSample_Click(object sender, EventArgs e)
@@ -75,17 +78,17 @@ namespace WindowsFormsApplication5
                 historyData += senval[0, j].ToString() + "\t";
                 for (int i = 0; i < 8; i++)
                 {
-                  avg += senval[i, 0];
+                    avg += senval[i, 0];
                 }
                 average[j] = avg / 8;
             }
             txtHistory.AppendText("\n" + historyData);
 
-            for (int i = 7; i > 0 ; i--)
+            for (int i = 7; i > 0; i--)
             {
                 for (int j = 6; j > 0; j--)
                 {
-                    senval[i, j] = senval[i - 1, j];     
+                    senval[i, j] = senval[i - 1, j];
                 }
             }
             txtNextSample.Text = DateTime.Now.TimeOfDay.Add(TimeSpan.FromMilliseconds(3600)).ToString();
@@ -98,9 +101,22 @@ namespace WindowsFormsApplication5
             timer2.Start();
         }
 
+        int noOfWritings = 0;
         private void timer2_Tick(object sender, EventArgs e)
         {
             txtNextLogging.Text = DateTime.Now.TimeOfDay.Add(TimeSpan.FromMilliseconds(33000)).ToString();
+            fstrem = new FileStream(@"C:\Users\achar_mxsu8a3\OOADP\AyushA\" + txtLogFile.Text + ".txt", FileMode.Append);
+            string cmafdata = "";
+            strw = new StreamWriter(fstrem);
+            for (int i = 0; i < 7; i++)
+            {
+                cmafdata += average[i].ToString() + "\t";
+            }
+            strw.Write(cmafdata + "\n");
+            strw.Close();
+            noOfWritings++;
+            txtNoOfWritings.Text = noOfWritings.ToString();
         }
+
     }
 }
